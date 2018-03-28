@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context="activity.OnlineQuestioningActivity">
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.ThreeBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorAccent" />
+
+    <ScrollView
+        android:id="@+id/sv_online_questioning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_affirm"
+        android:layout_below="@+id/title"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_teacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="30dp"
+                android:paddingTop="30dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_headImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/general_touxiang_y_no" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/iv_headImg"
+                    android:layout_alignTop="@+id/iv_headImg"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/iv_headImg"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="王二小"
+                        android:textColor="@color/textColor_default"
+                        android:textSize="15sp" />
+
+                    <RatingBar
+                        android:id="@+id/rb_grade"
+                        style="@style/GlimmerRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="12dp"
+                        android:layout_below="@+id/tv_name"
+                        android:layout_marginTop="3dp"
+                        android:isIndicator="true"
+                        android:stepSize="0.5"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textColor_division" />
+
+            <!--科目-->
+            <LinearLayout
+                android:id="@+id/ll_subject"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="科目"
+                    android:textColor="@color/textColor_default"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_service_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:text="请选择科目"
+                    android:textColor="@color/textColor_hint"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ico_right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textColor_division" />
+
+            <!--问题数-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="问题数"
+                    android:textColor="@color/textColor_default"
+                    android:textSize="15sp" />
+
+                <com.wenyue.chenmeng.widget.RadioGroupEx
+                    android:layout_width="230dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_one"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rb_invite_selector"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/rb_invite_textcolor"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_two"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rb_invite_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/rb_invite_textcolor"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_three"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rb_invite_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/rb_invite_textcolor"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_four"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rb_invite_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@color/rb_invite_textcolor"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_five"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rb_invite_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@color/rb_invite_textcolor"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_six"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/rb_invite_selector"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="@color/rb_invite_textcolor"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_seven"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/rb_invite_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="7"
+                        android:textColor="@color/rb_invite_textcolor"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_eight"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/rb_invite_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="8"
+                        android:textColor="@color/rb_invite_textcolor"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_nine"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/rb_invite_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="9"
+                        android:textColor="@color/rb_invite_textcolor"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_ten"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/rb_invite_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="10"
+                        android:textColor="@color/rb_invite_textcolor"
+                        android:textSize="13sp" />
+
+                </com.wenyue.chenmeng.widget.RadioGroupEx>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textColor_division" />
+
+            <!--费用-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="费用"
+                    android:textColor="@color/textColor_default"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_cost"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="￥30*1"
+                    android:textColor="@color/textColor_hint"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:text="合计￥30"
+                    android:textColor="@color/screen_fillColor"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textColor_division" />
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="标题"
+                android:minHeight="50dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/textColor_default"
+                android:textColorHint="@color/textColor_hint"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textColor_division" />
+
+            <EditText
+                android:id="@+id/et_context"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="请根据选择的问题数，输入相同的问题数和描述，超过问题数老师不会进行解答。"
+                android:maxHeight="200dp"
+                android:minHeight="100dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/textColor_default"
+                android:textColorHint="@color/textColor_hint"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textColor_division" />
+
+            <!--拍照-->
+            <LinearLayout
+                android:id="@+id/ll_photograph"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/ico_picture_yy" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="输入太慢可以拍照提交问题。"
+                    android:textColor="@color/textColor_hint"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/textColor_division" />
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar" />
+
+    <TextView
+        android:id="@+id/tv_affirm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_update_color"
+        android:gravity="center"
+        android:text="确认无误,提交问题"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</RelativeLayout>

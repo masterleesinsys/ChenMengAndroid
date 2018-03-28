@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_teacher_photo"
+        android:layout_width="135dp"
+        android:layout_height="85dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/general_kecheng_no" />
+
+    <TextView
+        android:id="@+id/tv_teacher_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_teacher_photo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="尹帅登"
+        android:textColor="@color/textColor_default"
+        android:textSize="13sp" />
+
+    <RatingBar
+        android:id="@+id/rb_teacher_grade"
+        style="@style/GlimmerRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:layout_below="@+id/tv_teacher_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:isIndicator="true"
+        android:stepSize="0.5"
+        tools:ignore="RtlHardcoded" />
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="activity.SearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        tools:ignore="UnknownIdInLayout">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/ico_left" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/tv_datermine"
+            android:layout_toRightOf="@+id/imgBack"
+            android:background="@color/search_editBg"
+            android:hint="课程名称关键字"
+            android:paddingLeft="48dp"
+            android:textColor="@color/textColor_default"
+            android:textColorHint="@color/textColor_hint"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/et_search"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:clickable="false"
+            android:src="@drawable/ico_search_ss"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tv_datermine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="12.5dp"
+            android:text="确定"
+            android:textColor="@color/textColor_default"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    </RelativeLayout>
+
+</LinearLayout>

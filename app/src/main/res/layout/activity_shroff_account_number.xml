@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context="activity.ShroffAccountNumberActivity">
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.ThreeBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorAccent" />
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar" />
+
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/ns_account"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:text="账户类型"
+        android:textColor="@color/textColor_default"
+        android:textSize="12sp"
+        app:hideArrow="true"
+        app:textTint="@color/textColor_default"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ns_account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:hint="账户"
+        android:paddingLeft="15dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor_default"
+        android:textColorHint="@color/textColor_hint"
+        android:textSize="12sp"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/et_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/et_account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:hint="姓名/昵称"
+        android:paddingLeft="15dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor_default"
+        android:textColorHint="@color/textColor_hint"
+        android:textSize="12sp"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/tv_deviceNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_nickname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="3dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="如您使用微信账户作为收款账号，为了更好的给您提供服务，工作人员转款时需要添加您为好友，请您注意验证通过。"
+        android:textColor="@color/textColor_hint"
+        android:textSize="12sp"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,TextFields" />
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/tv_deviceNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_next"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

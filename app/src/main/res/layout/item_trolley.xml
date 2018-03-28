@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <CheckBox
+        android:id="@+id/cb_trolley"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/iv_store"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/cb_trolley" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/iv_store"
+        android:text="小学一年级语文下册(2016版)"
+        android:textColor="@color/textColor_default"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_store"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:text="X 1"
+        android:textColor="@color/textColor_hint"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_store"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/tv_number"
+        android:text="￥50.00"
+        android:textColor="@color/main_update_color"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/iv_store"
+        android:background="@color/textColor_division" />
+
+</RelativeLayout>

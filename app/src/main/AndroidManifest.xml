@@ -2,20 +2,90 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wenyue.chenmeng">
 
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ico_dl_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ico_dl_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <!-- 版本更新 -->
+        <service
+            android:name="service.VerUpdateService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="service.CustomVersionDialogActivity" />
+
+        <!-- 登录 -->
+        <activity android:name=".activity.MineActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.TeacherActivity" />
+        <activity android:name=".activity.MallActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.RegisterPerfectdataActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.RegisterUserAgreementActivity" />
+        <activity android:name=".activity.RegisterSetPwdActivity" />
+        <activity android:name=".activity.ResetPasswordActivity" />
+        <activity android:name=".activity.ForgetPasswordActivity" />
+        <activity android:name=".activity.SetActivity" />
+        <activity android:name=".activity.SetFeedBackActivity" />
+        <activity android:name=".activity.MyInfoActivity" />
+        <activity android:name=".activity.PasswordModiActivity" />
+        <activity android:name=".activity.MessageActivity" />
+        <activity android:name=".activity.VideoListActivity" />
+        <activity android:name=".activity.NewsDetailActivity" />
+        <activity android:name=".activity.AdDetailsActivity" />
+        <activity android:name=".activity.VideoDetailActivity" />
+        <activity android:name=".activity.SearchResultActivity" />
+        <activity android:name=".activity.OnlineQuestioningActivity" />
+        <activity android:name=".activity.UpgradeActivity" />
+        <activity android:name=".activity.GradeChoiceActivity" />
+        <activity android:name=".activity.TeacherDetailActivity" />
+        <activity android:name=".activity.MyPromotionActivity" />
+        <activity android:name=".activity.ShoppingTrolleyActivity" />
+        <activity android:name=".activity.EducationActivity" />
+        <activity android:name=".activity.GiveARewardActivity" />
+        <activity android:name=".activity.EducationDetailActivity" />
+        <activity android:name=".activity.RechargeActivity" />
+        <activity android:name=".activity.VideoList2Activity" />
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.OrderDynamicActivity" />
+        <activity android:name=".activity.OrdersForGoodsActivity" />
+        <activity android:name=".activity.ShippingAddressActivity" />
+        <activity android:name=".activity.ShippingEditAddressActivity" />
+        <activity android:name=".activity.ScreenActivity" />
+        <activity android:name=".activity.MallDetailActivity" />
+        <activity android:name=".activity.MyInterestActivity" />
+        <activity android:name=".activity.BalanceActivity" />
+        <activity android:name=".activity.WithdrawalsActivity" />
+        <activity android:name=".activity.WithdrawalsRecordActivity" />
+        <activity android:name=".activity.ShroffAccountNumberActivity" />
+        <activity android:name=".activity.MyCollectActivity" />
     </application>
 
 </manifest>

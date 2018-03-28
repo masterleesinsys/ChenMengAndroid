@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ico_logo" />
+
+            <LinearLayout
+                android:id="@+id/ll_scarch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ico_search_ss" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="输入视频名称搜索"
+                    android:textColor="@color/textColor_scarch"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_message"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ico_an_xinxi_new" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            android:id="@+id/ban_main"
+            android:layout_width="match_parent"
+            android:layout_height="105dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--课程-->
+            <RelativeLayout
+                android:id="@+id/rl_course"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ico_an_kecheng" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_course"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="5dp"
+                    android:text="课程"
+                    android:textColor="@color/textColor_default"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <!--名师-->
+            <RelativeLayout
+                android:id="@+id/rl_topTeacher"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_topTeacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ico_an_mingshi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_topTeacher"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="5dp"
+                    android:text="名师"
+                    android:textColor="@color/textColor_default"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <!--答疑-->
+            <RelativeLayout
+                android:id="@+id/rl_answerQuestions"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_answerQuestions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ico_an_dayi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_answerQuestions"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="5dp"
+                    android:text="答疑"
+                    android:textColor="@color/textColor_default"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <!--回放-->
+            <RelativeLayout
+                android:id="@+id/rl_playback"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_playback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ico_an_huifang" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_playback"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="5dp"
+                    android:text="回放"
+                    android:textColor="@color/textColor_default"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <!--精品-->
+            <RelativeLayout
+                android:id="@+id/rl_boutique"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_boutique"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ico_an_jingpin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_boutique"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="5dp"
+                    android:text="精品"
+                    android:textColor="@color/textColor_default"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

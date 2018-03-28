@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="activity.RegisterActivity">
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.ThreeBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/editbackground"
+            android:hint="手机号"
+            android:inputType="phone|number"
+            android:maxLength="11"
+            android:paddingLeft="7.5dp"
+            android:singleLine="true"
+            android:textColor="@color/textColor_default"
+            android:textColorHint="@color/textColor_hint"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_recommendAccount"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/editbackground"
+            android:hint="推荐账户 (选填)"
+            android:inputType="phone|number"
+            android:maxLength="11"
+            android:paddingLeft="7.5dp"
+            android:singleLine="true"
+            android:textColor="@color/textColor_default"
+            android:textColorHint="@color/textColor_hint"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15sp">
+
+            <EditText
+                android:id="@+id/et_verification"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/editbackground"
+                android:hint="请输入短信验证码"
+                android:inputType="phone|number"
+                android:maxLength="6"
+                android:paddingLeft="7.5dp"
+                android:singleLine="true"
+                android:textColor="@color/textColor_default"
+                android:textColorHint="@color/textColor_hint"
+                android:textSize="15sp"
+                tools:ignore="Deprecated" />
+
+            <TextView
+                android:id="@+id/tv_sendverification"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="24dp"
+                android:layout_weight="1"
+                android:background="@drawable/verificationbackground"
+                android:gravity="center"
+                android:text="发送验证码"
+                android:textColor="@color/textColor_title"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_user_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="同意"
+                android:textColor="@color/textColor_default"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_user_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="《注册协议》"
+                android:textColor="@color/textColor_title"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_registernext"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_next"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

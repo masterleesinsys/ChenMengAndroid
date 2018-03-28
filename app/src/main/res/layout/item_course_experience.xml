@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_course_experience"
+        android:layout_width="135dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/general_kecheng_no" />
+
+    <TextView
+        android:id="@+id/tv_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/iv_course_experience"
+        android:ellipsize="end"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="一年级 语文（苏教）"
+        android:textColor="@color/textColor_default"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_nickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_course"
+        android:layout_toRightOf="@+id/iv_course_experience"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp"
+        android:singleLine="true"
+        android:text="卢帅登"
+        android:textColor="@color/textColor_scarch"
+        android:textSize="12sp" />
+
+    <RatingBar
+        android:id="@+id/rb_score"
+        style="@style/GlimmerRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:layout_below="@+id/tv_course"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/tv_nickName"
+        android:isIndicator="true"
+        android:stepSize="0.5"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:id="@+id/iv_onLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nickName"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@+id/iv_course_experience"
+        android:src="@drawable/ico_mine_sp" />
+
+    <TextView
+        android:id="@+id/tv_onLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nickName"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@+id/iv_onLine"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="21806人在线"
+        android:textColor="@color/textColor_hint"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/tv_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_onLine"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/iv_course_experience"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="11-02更新"
+        android:textColor="@color/textColor_hint"
+        android:textSize="11sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/iv_course_experience"
+        android:layout_marginTop="15dp"
+        android:background="@color/textColor_division" />
+
+</RelativeLayout>

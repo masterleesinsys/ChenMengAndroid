@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context="activity.TeacherActivity">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:SpinKit_Color="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tabbar"
+            android:layout_below="@+id/ll_teacherRecommended">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_teacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <include
+                android:id="@+id/not_info"
+                layout="@layout/not_info"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <!--名师推荐-->
+        <LinearLayout
+            android:id="@+id/ll_teacherRecommended"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/main_update_color" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:text="名师推荐"
+                android:textColor="@color/textColor_default"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <com.wenyue.chenshi.widget.TabBar
+            android:id="@+id/tabbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:page="release" />
+
+        <include
+            android:id="@+id/title"
+            layout="@layout/titlebar" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@color/white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_grade"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            tools:ignore="UnusedAttribute" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rv_grade"
+            android:background="@color/textColor_division"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_subject"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/view"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
+

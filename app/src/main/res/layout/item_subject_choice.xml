@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_subject"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rb_invite_unchecked"
+        android:gravity="center"
+        android:text="高三"
+        android:textColor="@color/rb_unchecked"
+        android:textSize="13sp" />
+
+</LinearLayout>

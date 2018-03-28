@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ico_dl_logo" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_image"
+        android:layout_toRightOf="@+id/iv_image"
+        android:text="预约授课"
+        android:textColor="@color/order_title"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/iv_image"
+        android:text="2018-12-02 15:00"
+        android:textColor="@color/order_content"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_image"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/iv_image"
+        android:text="￥50.00"
+        android:textColor="@color/main_update_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_originalCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_image"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/tv_price"
+        android:paddingLeft="10dp"
+        android:text="￥65.00"
+        android:textColor="@color/textColor_hint"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_image"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:paddingRight="10dp"
+        android:text="1课时"
+        android:textColor="@color/textColor_hint"
+        android:textSize="14sp" />
+
+</RelativeLayout>

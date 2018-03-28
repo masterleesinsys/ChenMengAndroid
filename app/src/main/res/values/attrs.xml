@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TabBar">
+        <attr name="page">
+            <enum name="main" value="0" />
+            <enum name="release" value="1" />
+            <enum name="mine" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

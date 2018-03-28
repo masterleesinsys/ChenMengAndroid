@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textColor_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="activity.SetFeedBackActivity">
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.ThreeBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/title"
+            layout="@layout/titlebar" />
+
+        <EditText
+            android:id="@+id/et_setfeedback"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editbackground"
+            android:gravity="top"
+            android:hint="@string/set_feedback"
+            android:padding="10dp"
+            android:textColor="@color/textColor_default"
+            android:textColorHint="@color/textColor_hint"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_setfeedback_determine"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_next"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

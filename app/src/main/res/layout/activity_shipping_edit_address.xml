@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context="activity.ShippingEditAddressActivity">
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.ThreeBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorAccent" />
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/white"
+        android:hint="收货人姓名"
+        android:paddingLeft="15dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor_default"
+        android:textColorHint="@color/textColor_hint"
+        android:textSize="15sp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/et_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:hint="联系电话"
+        android:inputType="phone"
+        android:maxLength="26"
+        android:paddingLeft="15dp"
+        android:singleLine="true"
+        android:textColor="@color/textColor_default"
+        android:textColorHint="@color/textColor_hint"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_site"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actv_phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/white"
+        android:gravity="left"
+        android:hint="收货地址"
+        android:maxHeight="200dp"
+        android:minHeight="70dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/textColor_default"
+        android:textColorHint="@color/textColor_hint"
+        android:textSize="15sp"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/et_site"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_next"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="21sp" />
+
+</RelativeLayout>
